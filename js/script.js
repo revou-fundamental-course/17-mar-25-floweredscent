@@ -55,3 +55,13 @@ function hitung() {
     
     hasilElement.innerHTML = hasil;
 }
+
+function reset() {
+    document.getElementById("bentuk").value = "";
+    document.getElementById("jenis").value = "luas";
+    document.getElementById("sisi").value = "";
+    document.getElementById("panjang").value = "";
+    document.getElementById("lebar").value = "";
+    document.getElementById("hasil").innerHTML = "";
+    document.getElementById("forminput").style.display = "none";
+}
