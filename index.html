@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Matematik Persegi</title>
 
-    <!--CSS External-->
+    <!--css external-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,11 +17,43 @@
             bangun datar persegi dan persegi panjang.
         </p>
         <br>
-        <!--Persegi-->
-        <label for="sisi">Hitung Persegi:</label>
-        <input type="number" id="sisi" placeholder="Masukkan sisi">
-        <button onclick="hitungPersegi()">Hitung</button>
-        <div class="result" id="hasilPersegi"></div>
+
+        <!--body-->
+
+        <!--pilih jenis bangun datar-->
+        <label for="bentuk">Pilih Bangun Datar:</label>
+        <select id="bentuk" onchange="tampilkanform()">
+            <option value="">-- Pilih --</option>
+            <option value="persegi">Persegi</option>
+            <option value="persegipanjang">Persegi Panjang</option>
+        </select>
+
+        <!--pilih hitung luas/keliling-->
+        <div id="forminput" style="display: none;">
+            <label for="jenis">Pilih Perhitungan:</label>
+            <select id="jenis">
+                <option value="luas">Luas</option>
+                <option value="keliling">Keliling</option>
+            </select>
+
+            <!--persegi-->
+            <div id="formpersegi" style="display: none;">
+                <label for="sisi">Masukkan Sisi:</label>
+                <input type="number" id="sisi" placeholder="Masukkan sisi">
+            </div>
+
+            <!--persegi panjang-->
+            <div id="formpersegipanjang" style="display: none;">
+                <label for="panjang">Masukkan Panjang:</label>
+                <input type="number" id="panjang" placeholder="Masukkan panjang">
+                <label for="lebar">Masukkan Lebar:</label>
+                <input type="number" id="lebar" placeholder="Masukkan lebar">
+            </div>
+
+            <!--hitung dan menampilkan hasil-->
+            <button onclick="hitung()">Hitung</button>
+            <div class="result" id="hasil"></div>
+        </div>
     </div>
 
     <!--javascript external-->
