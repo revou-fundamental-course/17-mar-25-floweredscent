@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
-    background-color:lightblue;
+    background-color:lemonchiffon;
 }
 .container {
     max-width: 400px;
@@ -11,24 +11,33 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    background-color:sandybrown;
 }
 select, input, button {
     width: 90%;
     padding: 10px;
     margin: 10px 0;
 }
-button {
+.hitung {
     padding: 10px 20px;
     background-color:seagreen;
     color: white;
     border: none;
     cursor: pointer;
 }
-button:hover {
-    background-color:#749BC2;
+.hitung:hover {
+    background-color:#076b1d;
 }
-
+.reset {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.reset:hover {
+    background-color: darkred;
+}
 .result {
     margin-top: 20px;
     font-weight: bold;

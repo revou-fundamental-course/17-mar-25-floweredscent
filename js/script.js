@@ -26,7 +26,7 @@ function hitung() {
     if (bentuk === "persegi") {
         let sisi = document.getElementById("sisi").value;
         if (sisi <= 0 || sisi === "") {
-            alert("Masukkan nilai sisi yang valid!");
+            alert("Masukkan nilai yang valid!");
             return;
         }
         if (jenis === "luas") {
@@ -41,7 +41,7 @@ function hitung() {
         let panjang = document.getElementById("panjang").value;
         let lebar = document.getElementById("lebar").value;
         if (panjang <= 0 || lebar <= 0 || panjang === "" || lebar === "") {
-            alert("Masukkan nilai panjang dan lebar yang valid!");
+            alert("Masukkan nilai yang valid!");
             return;
         }
         if (jenis === "luas") {
@@ -57,11 +57,8 @@ function hitung() {
 }
 
 function reset() {
-    document.getElementById("bentuk").value = "";
-    document.getElementById("jenis").value = "luas";
     document.getElementById("sisi").value = "";
     document.getElementById("panjang").value = "";
     document.getElementById("lebar").value = "";
     document.getElementById("hasil").innerHTML = "";
-    document.getElementById("forminput").style.display = "none";
 }
