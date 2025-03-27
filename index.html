@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Matematik Persegi</title>
+    <title>Katik - Kalkulator Matematik</title>
 
     <!--css external-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <!--header-->
-        <h2>Selamat Datang di Kalkulator Matematik Persegi!</h2>
+    <!--header-->
+    <h1 class="main-heading">Katik - Kalkulator Matematik</h1>
+    <div class="box">
+        <h2>Selamat Datang di Katik!</h2>
         <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas serta keliling dari 
             bangun datar persegi dan persegi panjang.
         </p>
@@ -27,6 +28,11 @@
             <option value="persegi">Persegi</option>
             <option value="persegipanjang">Persegi Panjang</option>
         </select>
+
+        <!--gambar-->
+        <div id="gambar" class="gambar-bangundatar">
+            <img id="gambarBentuk" src="" alt="" style="display: none;">
+        </div>
 
         <!--pilih hitung luas/keliling-->
         <div id="forminput" style="display: none;">
@@ -50,7 +56,7 @@
                 <input type="number" id="lebar" placeholder="Masukkan lebar">
             </div>
 
-            <!--hitung dan menampilkan hasil-->
+            <!--hitung, reset, dan menampilkan hasil-->
             <button onclick="hitung()" class="hitung">Hitung</button>
             <button onclick="reset()" class="reset">Reset</button>
             <div class="result" id="hasil"></div>

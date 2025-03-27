@@ -1,19 +1,28 @@
 function tampilkanform() {
     let bentuk = document.getElementById("bentuk").value;
-    let formContainer = document.getElementById("forminput");
-    let formPersegi = document.getElementById("formpersegi");
-    let formPersegiPanjang = document.getElementById("formpersegipanjang");
+    let forminput = document.getElementById("forminput");
+    let formpersegi = document.getElementById("formpersegi");
+    let formpersegipanjang = document.getElementById("formpersegipanjang");
+    let gambarbentuk = document.getElementById("gambarBentuk");
 
     if (bentuk === "persegi") {
-        formContainer.style.display = "block";
-        formPersegi.style.display = "block";
-        formPersegiPanjang.style.display = "none";
+        forminput.style.display = "block";
+        formpersegi.style.display = "block";
+        formpersegipanjang.style.display = "none";
+
+        gambarbentuk.src = "assets/gambar-persegi.png";
+        gambarbentuk.style.display = "block";
+
     } else if (bentuk === "persegipanjang") {
-        formContainer.style.display = "block";
-        formPersegi.style.display = "none";
-        formPersegiPanjang.style.display = "block";
+        forminput.style.display = "block";
+        formpersegi.style.display = "none";
+        formpersegipanjang.style.display = "block";
+
+        gambarbentuk.src = "assets/gambar-persegipanjang.png";
+        gambarbentuk.style.display = "block";
+
     } else {
-        formContainer.style.display = "none";
+        forminput.style.display = "none";
     }
 }
 
@@ -31,10 +40,10 @@ function hitung() {
         }
         if (jenis === "luas") {
             let luas = sisi * sisi;
-            hasil = `Luas = Sisi × Sisi <br> Luas = ${sisi} × ${sisi} = <strong>${luas}</strong>`;
+            hasil = `Luas = Sisi × Sisi <br> Luas = ${sisi} × ${sisi} <br> Luas = <strong>${luas}</strong>`;
         } else {
             let keliling = 4 * sisi;
-            hasil = `Keliling = 4 × Sisi <br> Keliling = 4 × ${sisi} = <strong>${keliling}</strong>`;
+            hasil = `Keliling = 4 × Sisi <br> Keliling = 4 × ${sisi} <br> Keliling = <strong>${keliling}</strong>`;
         }
     } 
     else if (bentuk === "persegipanjang") {
@@ -46,10 +55,11 @@ function hitung() {
         }
         if (jenis === "luas") {
             let luas = panjang * lebar;
-            hasil = `Luas = Panjang × Lebar <br> Luas = ${panjang} × ${lebar} = <strong>${luas}</strong>`;
+            hasil = `Luas = Panjang × Lebar <br> Luas = ${panjang} × ${lebar} <br> Luas = <strong>${luas}</strong>`;
         } else {
             let keliling = 2 * (parseFloat(panjang) + parseFloat(lebar));
-            hasil = `Keliling = 2 × (Panjang + Lebar) <br> Keliling = 2 × (${panjang} + ${lebar}) = <strong>${keliling}</strong>`;
+            hasil = `Keliling = 2 × (Panjang + Lebar) <br> Keliling = 2 × (${panjang} + ${lebar}) 
+            <br> Keliling = <strong>${keliling}</strong>`;
         }
     }
     
