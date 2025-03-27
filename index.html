@@ -31,7 +31,7 @@
 
         <!--gambar-->
         <div id="gambar" class="gambar-bangundatar">
-            <img id="gambarBentuk" src="" alt="" style="display: none;">
+            <img id="gambarbentuk" src="" alt="" style="display: none;">
         </div>
 
         <!--pilih hitung luas/keliling-->
@@ -42,13 +42,13 @@
                 <option value="keliling">Keliling</option>
             </select>
 
-            <!--persegi-->
+            <!--untuk hitung persegi-->
             <div id="formpersegi" style="display: none;">
                 <label for="sisi">Masukkan Sisi:</label>
                 <input type="number" id="sisi" placeholder="Masukkan sisi">
             </div>
 
-            <!--persegi panjang-->
+            <!--untuk hitung persegi panjang-->
             <div id="formpersegipanjang" style="display: none;">
                 <label for="panjang">Masukkan Panjang:</label>
                 <input type="number" id="panjang" placeholder="Masukkan panjang">
@@ -56,9 +56,11 @@
                 <input type="number" id="lebar" placeholder="Masukkan lebar">
             </div>
 
-            <!--hitung, reset, dan menampilkan hasil-->
+            <!--button untuk hitung dan reset-->
             <button onclick="hitung()" class="hitung">Hitung</button>
             <button onclick="reset()" class="reset">Reset</button>
+            
+            <!--menampilkan hasil-->
             <div class="result" id="hasil"></div>
         </div>
     </div>

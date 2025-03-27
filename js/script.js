@@ -3,7 +3,7 @@ function tampilkanform() {
     let forminput = document.getElementById("forminput");
     let formpersegi = document.getElementById("formpersegi");
     let formpersegipanjang = document.getElementById("formpersegipanjang");
-    let gambarbentuk = document.getElementById("gambarBentuk");
+    let gambarbentuk = document.getElementById("gambarbentuk");
 
     if (bentuk === "persegi") {
         forminput.style.display = "block";
@@ -23,13 +23,14 @@ function tampilkanform() {
 
     } else {
         forminput.style.display = "none";
+        gambarbentuk.style.display = "none";
     }
 }
 
 function hitung() {
     let bentuk = document.getElementById("bentuk").value;
     let jenis = document.getElementById("jenis").value;
-    let hasilElement = document.getElementById("hasil");
+    let hasilelement = document.getElementById("hasil");
     let hasil = "";
 
     if (bentuk === "persegi") {
@@ -63,7 +64,8 @@ function hitung() {
         }
     }
     
-    hasilElement.innerHTML = hasil;
+    hasilelement.innerHTML = hasil;
+    hasilelement.style.display = "block";
 }
 
 function reset() {
@@ -71,4 +73,5 @@ function reset() {
     document.getElementById("panjang").value = "";
     document.getElementById("lebar").value = "";
     document.getElementById("hasil").innerHTML = "";
+    document.getElementById("hasil").style.display = "none";
 }
